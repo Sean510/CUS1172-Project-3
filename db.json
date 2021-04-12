@@ -1,1 +1,28 @@
+{
+    "quiz1":[
+        {
+            "q_num" : 1,
+            "q_type" : "multiple_choice" ,
+            "q_text" : "Which is the correct way to print \"Hello World' in Java?\"",
+            "A" : "print(\"Hello World\");",
+            "B" : "Console.WriteLine(\"Hello World\");",
+            "C" : "System.out.println(\"Hello World\");",
+            "correct_answer" : "C",
+            "explanation" : "The correct answer is C.  A & B are written in different programming languages."
+        },
 
+        {
+            "q_num" : 2,
+            "q_type" : "true/false",
+            "q_text" : "Java is short for JavaScript.",
+            "T" : "True",
+            "F" : "False",
+            "correct_answer" : "False",
+            "explanation" : "The correct answer is false. JavaScript is a different programming language than Java."
+        },
+
+        {
+            
+        }
+    ]
+  }
