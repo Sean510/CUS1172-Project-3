@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function handle_app_page_event(e) {
   
+  console.log(e.target.id);
+  
   if (e.target.id == "quiz1") {
   
     alert("quiz 1 pressed");
