@@ -1,28 +1,75 @@
 {
     "quiz1":[
         {
-            "q_num" : 1,
-            "q_type" : "multiple_choice" ,
-            "q_text" : "Which is the correct way to print \"Hello World' in Java?\"",
+            "num" : 1,
+            "type" : "multiple_choice" ,
+            "text" : "Which is the correct way to print \"Hello World' in Java?\"",
             "A" : "print(\"Hello World\");",
             "B" : "Console.WriteLine(\"Hello World\");",
             "C" : "System.out.println(\"Hello World\");",
-            "correct_answer" : "C",
+            "answer" : "C",
             "explanation" : "The correct answer is C.  A & B are written in different programming languages."
         },
 
         {
-            "q_num" : 2,
-            "q_type" : "true/false",
-            "q_text" : "Java is short for JavaScript.",
+            "num" : 2,
+            "type" : "true/false",
+            "text" : "Java is short for JavaScript.",
             "T" : "True",
             "F" : "False",
-            "correct_answer" : "False",
+            "answer" : "False",
             "explanation" : "The correct answer is false. JavaScript is a different programming language than Java."
         },
 
         {
+            "num" : 3,
+            "type" : "short_answer",
+            "text" : "Declare a variable, x, of type Integer with the value 4 in Java.",
+            "answer" : "int x = 4;",
+            "explanation" : "The correct answer is \"int x = 4;\"."
             
+        },
+
+        {
+            "num" : 4,
+            "type" : "true/false",
+            "text" : "public static void setInt(int i){}; is a method that returns an integer",
+            "T" : "True",
+            "F" : "False",
+            "answer" : "False",
+            "explanation" : "The correct answer is false. Void methods do not have a return type."
+        },
+
+        {
+            "num" : 5,
+            "type" : "multiple_choice" ,
+            "text" : "Which data type is used to create a variable that stores text?",
+            "A" : "String",
+            "B" : "Integer",
+            "C" : "Boolean",
+            "answer" : "A",
+            "explanation" : "The correct answer is A. Integers store numbers and Booleans store True/False values."
+        }
+    ],
+
+    "quiz2" :[
+        {
+            "num" : 1,
+            "type" : "short_answer",
+            "text" : "Declare a String, \"name\", that holds the name Bob.",
+            "answer" : "String name = \"Bob\";",
+            "explanation" : "The correct syntax is \"String name = \"Bob\";\""
+        },
+
+        {
+            "num" : 2,
+            "type" : "true/false",
+            "text" : "\"public static void main(String[] args){}\" declares a main method in Java",
+            "T" : "True",
+            "F" : "False",
+            "answer" : "True",
+            "explanation" : "The correct answer is True."
+
         }
     ]
   }
