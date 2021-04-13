@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function handle_app_page_event(e) {
   
-  console.log(e.target.id);
+  console.log(e.target.value);
   
   if (e.target.id == "quiz1") {
   
