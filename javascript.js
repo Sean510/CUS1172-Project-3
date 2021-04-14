@@ -19,7 +19,7 @@ const display_quiz = async (quiz_num, question_num) => {
     //console.log(model);
     //console.log(model.0);
     const html_element = display_question(model,'#multiple_choice')
-    document.querySelector("page_view").innerHTML = html_element;
+    document.querySelector("#page_view").innerHTML = html_element;
 
 
   } else if (quiz_num == 2) {
@@ -28,7 +28,7 @@ const display_quiz = async (quiz_num, question_num) => {
     const model = await data.json()
     console.log(model);
     const html_element = display_question(model, 0, model.type)
-    document.querySelector("page_view").innerHTML = html_element;
+    document.querySelector("#page_view").innerHTML = html_element;
 
   }
 }
