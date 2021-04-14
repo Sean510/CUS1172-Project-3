@@ -24,6 +24,7 @@ const display_quiz = async (quiz_num, question_num) => {
 
     const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/quiz2")
     const model = await data.json()
+    console.log(model);
     const html_element = display_question(model, 0, model.type)
     document.querySelector("page_view").innerHTML = html_element;
 
