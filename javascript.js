@@ -16,9 +16,9 @@ const display_quiz = async (quiz_num, question_num) => {
     
     const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/quiz1")
     const model = await data.json()
-    console.log(model[0]);
-    console.log(model[0].type);
-    const html_element = display_question(model.question_num,model.type)
+    console.log(model);
+    console.log(model.0);
+    const html_element = display_question(model,'#multiple_choice')
     document.querySelector("page_view").innerHTML = html_element;
 
 
@@ -50,12 +50,12 @@ function handle_app_page_event(e) {
   
 };
 
-const display_question = (model, question_number, view) => {
+const display_question = (model, view) => {
   template_source = document.querySelector(view).innerHTML
 
   var template = Handlebars.compile(template_source);
 
-  var html_widget_element = template(model.question_number)
+  var html_widget_element = template(model)
 
   return html_widget_element
 }
