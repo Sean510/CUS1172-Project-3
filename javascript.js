@@ -16,8 +16,8 @@ const display_quiz = async (quiz_num, question_num) => {
     
     const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/quiz1")
     const model = await data.json()
-    console.log(model);
-    console.log(model.0);
+    //console.log(model);
+    //console.log(model.0);
     const html_element = display_question(model,'#multiple_choice')
     document.querySelector("page_view").innerHTML = html_element;
 
