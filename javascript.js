@@ -14,7 +14,7 @@ const display_quiz = async (quiz_num, question_num) => {
   
   if (quiz_num == 1) {
     
-    const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/quiz1")
+    const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/db")
     const model = await data.json()
     console.log(model);
     //console.log(model.0);
