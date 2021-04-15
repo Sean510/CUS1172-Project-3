@@ -64,7 +64,7 @@ const display_question = (model, view) => {
 
 function mc_tf_check(quiz_num, question_num, e, answer) {
 
-  if (e.target.value == answer) {
+  if (e.target.value != answer) {
     alert("Answer is correct");
     display_quiz(quiz_num,question_num+1);
   }
