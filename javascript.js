@@ -15,7 +15,7 @@ function handle_app_page_event(e) {
   
   let user_name = document.querySelector('#user_name').value;
   
-  console.log(e.target.value);
+  console.log(user_name);
   
   if (e.target.value == "quiz1") {
   
