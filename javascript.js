@@ -10,26 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
 });
 
-const display_quiz = async (quiz_num, question_num) => {
-  
-  if (quiz_num == 1) {
-    
-    const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/db")
-    const model = await data.json()
-    const html_element = display_question(model,`#${model.quiz1[0].type}`)
-    document.querySelector("#page_view").innerHTML = html_element;
-
-
-  } else if (quiz_num == 2) {
-
-    const data = await fetch(""https://my-json-server.typicode.com/sean510/cus1172-project-3/db"")
-    const model = await data.json()
-    const html_element = display_question(model, `#${model.quiz2[0].type}`)
-    document.querySelector("#page_view").innerHTML = html_element;
-
-  }
-}
-
 
 
 function handle_app_page_event(e) {
@@ -46,6 +26,30 @@ function handle_app_page_event(e) {
   }
   
 };
+
+
+
+const display_quiz = async (quiz_num, question_num) => {
+  
+  if (quiz_num == 1) {
+    
+    const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/db")
+    const model = await data.json()
+    const html_element = display_question(model,`#${model.quiz1[question_num].type}`)
+    document.querySelector("#page_view").innerHTML = html_element;
+
+
+  } else if (quiz_num == 2) {
+
+    const data = await fetch(""https://my-json-server.typicode.com/sean510/cus1172-project-3/db"")
+    const model = await data.json()
+    const html_element = display_question(model, `#${model.quiz2[question_num].type}`)
+    document.querySelector("#page_view").innerHTML = html_element;
+
+  }
+}
+
+
 
 const display_question = (model, view) => {
   template_source = document.querySelector(view).innerHTML
