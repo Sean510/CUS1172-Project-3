@@ -38,19 +38,19 @@
     <!--multiple choice question template-->
     <script id="multiple_choice" type="text/x-handlebars-template">
     
-        <h2 class="question_text">{{this.question}}</h1>
+        <h2 class="question_text">{{this.quiz1.0.question}}</h1>
         <br>
-        <button type="button" class="buttonA" id="a">{{this.A}}</button>
+        <button type="button" class="buttonA" value="A">{{this.quiz1.0.A}}</button>
         <br>
-        <button type="button" class="buttonB" id="b">{{this.B}}</button>
+        <button type="button" class="buttonB" value="B">{{this.quiz1.0.B}}</button>
         <br>
-        <button type="button" class="buttonC" id="c">{{this.C}}</button>
+        <button type="button" class="buttonC" value="C">{{this.quiz1.0.C}}</button>
     </script>
 
     <!--true/false question template-->
     <script id="true_false" type="text/x-handlebars-template">
 
-      <h2 class="question_text">{{this.question}}</h2>
+      <h2 class="question_text">{{this.quiz1.1.question}}</h2>
       <br>
       <button type="button" class="true_botton" id="true">True</button>
       <button type="button" class="false_button" id="false">False</button>
@@ -59,7 +59,7 @@
     <!--short answer question template-->
     <script id="short_answer" type="text/x-handlebars-template">
     
-      <h2 class="question_text">{{this.question}}</h2>
+      <h2 class="question_text">{{this.quiz1.2.question}}</h2>
       <br>
       <form>
         <input id="question_answer" autocomplete="off" autofocus placeholder="Enter your answer here." type="text">
