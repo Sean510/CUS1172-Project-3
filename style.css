@@ -9,3 +9,7 @@ body {
 #correct_num {
   color : green;
 }
+
+.test_info_view {
+  align : center;
+}
