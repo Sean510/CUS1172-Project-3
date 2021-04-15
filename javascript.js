@@ -34,10 +34,21 @@ const display_quiz = async (quiz_num, question_num) => {
     document.querySelector("#page_view").innerHTML = html_element;
     
     let answer = model.quiz1[question_num].answer;
+    let question_type = model.quiz1.[question_num].type;
+    let explanation = medol.quiz1.[question_num].explanation;
     
-    document.querySelector("#page_view").onclick = (e) => {
-      mc_tf_check(quiz_num, question_num, e, answer);
+    if (question_type == "multiple_choice") {
+      
+      document.querySelector("#page_view").onclick = (e) => {
+        mc_check(quiz_num, question_num, e, answer, explanation);
+      }
+    } else if (question_type == "true_false") {
+
+      document.querySelector("#page_view").onclick = (e) => {
+        tf_check(quiz_num, question_num, e, answer, explanation);
+      }
     }
+    
 
 
   } else if (quiz_num == 2) {
@@ -62,10 +73,56 @@ const display_question = (model, view) => {
   return html_widget_element
 }
 
-function mc_tf_check(quiz_num, question_num, e, answer) {
+function mc_check(quiz_num, question_num, e, answer, explanation) {
 
-  if (e.target.value != answer) {
-    alert("Answer is correct");
-    display_quiz(quiz_num,question_num+1);
+  if (answer == "A") {
+    
+    if (e.target.value == answer) {
+      //display_correct()
+    } else if (e.taget.value == "B" || e.target.value == "C") {
+      alert(explanation);
+      display_quiz(quiz_num,question_num+1);
+    }
+  
+  }else if (answer == "B") {
+    
+    if (e.target.value == answer) {
+      //display_correct()
+    } else if (e.taget.value == "A" || e.target.value == "C") {
+      alert(explanation);
+      display_quiz(quiz_num,question_num+1);
+    }
+  
+  } else if (answer == "C") {
+      
+    if (e.target.value == answer) {
+        //display_correct()
+      } else if (e.taget.value == "A" || e.target.value == "B") {
+        alert(explanation);
+        display_quiz(quiz_num,question_num+1);
+      }
+  }
+  
+}
+
+function tf_check(quiz_num, question_num, e, answer, explanation) {
+
+  if (answer == "True") {
+    
+    if (e.target.value == answer) {
+      //display_correct()
+    } else if (e.target.value == "False") {
+      alert(explanation);
+      display_quiz(quiz_num, question_num+1);
+    }
+  
+  } else if (answer == "False") {
+    
+    if (e.target.value == answer) {
+      //display_correct
+    } else if (e.target.value == "True") {
+      alert(explanation);
+      display_quiz(quiz_num,question_num+1);
+    }
   }
 }
