@@ -40,7 +40,7 @@ const display_quiz = async (quiz_num, question_num) => {
     document.querySelector("#page_view").innerHTML = html_element;
     
     document.querySelector("#page_view").onclick = (e) => {
-      check_if_correct(e);
+      check_if_correct(e,quiz1);
 
     }
 
@@ -67,9 +67,9 @@ const display_question = (model, view) => {
   return html_widget_element
 }
 
-function check_if_correct(e) {
+function check_if_correct(e, which_quiz) {
 
-  if (e.target.value == model.quiz_num[question_num].answer) {
+  if (e.target.value == model.which_quiz[question_num].answer) {
     alert("Answer is correct");
   }
 }
