@@ -1,6 +1,4 @@
-let user_name = document.querySelector('#usere_name').value;
 const testState = {
-  test_taker : user_name,
   questions_correct : 0,
   questions_wrong : 0
 }
@@ -17,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function select_quiz(e) {
   
-  //let user_name = document.querySelector('#user_name').value;
+  let user_name = document.querySelector('#user_name').value;
   
   if (e.target.value == "quiz1") {
   
@@ -114,8 +112,10 @@ function mc_check(quiz_num, question_num, e, answer, explanation) {
     
     if (e.target.value == answer) {
       //display_correct()
+      testState.questions_correct += 1
     } else if (e.taget.value == "B" || e.target.value == "C") {
       alert(explanation);
+      testState.questions_wrong +=1
       display_quiz(quiz_num,question_num+1);
     }
   
@@ -123,8 +123,10 @@ function mc_check(quiz_num, question_num, e, answer, explanation) {
     
     if (e.target.value == answer) {
       //display_correct()
+      testState.questions_correct +=1
     } else if (e.taget.value == "A" || e.target.value == "C") {
       alert(explanation);
+      testState.questions_wrong +=1
       display_quiz(quiz_num,question_num+1);
     }
   
@@ -132,8 +134,10 @@ function mc_check(quiz_num, question_num, e, answer, explanation) {
       
     if (e.target.value == answer) {
         //display_correct()
+        testState.questions_correct +=1;
       } else if (e.target.value == "A" || e.target.value == "B") {
         alert(explanation);
+        testState.questions_wrong +=1;
         display_quiz(quiz_num,question_num+1);
       }
   }
@@ -146,8 +150,11 @@ function tf_check(quiz_num, question_num, e, answer, explanation) {
     
     if (e.target.value == answer) {
       //display_correct()
+      testState.questions_correct +=1
+    
     } else if (e.target.value == "False") {
       alert(explanation);
+      testState.questions_wrong +=1
       display_quiz(quiz_num, question_num+1);
     }
   
@@ -155,8 +162,11 @@ function tf_check(quiz_num, question_num, e, answer, explanation) {
     
     if (e.target.value == answer) {
       //display_correct
+      testState.questions_correct += 1
+    
     } else if (e.target.value == "True") {
       alert(explanation);
+      testState.questions_wrong += 1
       display_quiz(quiz_num,question_num+1);
     }
   }
@@ -166,8 +176,11 @@ function short_answer_check(quiz_num, question_num, answer_text, answer, explana
   
   if(answer_text == answer) {
     //display_correct()
+    testState.questions_correct +=1
+  
   } else {
     alert(explanation);
+    testState.questions_wrong +=1
     display_quiz(quiz_num, question_num+1);
   }
 }
