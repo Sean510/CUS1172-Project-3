@@ -97,7 +97,7 @@ function mc_check(quiz_num, question_num, e, answer, explanation) {
       
     if (e.target.value == answer) {
         //display_correct()
-      } else if (e.taget.value == "A" || e.target.value == "B") {
+      } else if (e.target.value == "A" || e.target.value == "B") {
         alert(explanation);
         display_quiz(quiz_num,question_num+1);
       }
