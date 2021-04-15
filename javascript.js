@@ -35,7 +35,7 @@ const display_quiz = async (quiz_num, question_num) => {
     
     let answer = model.quiz1[question_num].answer;
     let question_type = model.quiz1[question_num].type;
-    let explanation = medol.quiz1[question_num].explanation;
+    let explanation = model.quiz1[question_num].explanation;
     
     if (question_type == "multiple_choice") {
       
