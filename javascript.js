@@ -19,7 +19,7 @@ const display_quiz = async (quiz_num, question_num) => {
     console.log(model.quiz1[0]);
     
   
-    const html_element = display_question(model,"#${model.quiz1[0].type}")
+    const html_element = display_question(model,`#${model.quiz1[0].type}`)
     document.querySelector("#page_view").innerHTML = html_element;
 
 
