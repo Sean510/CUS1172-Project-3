@@ -1,3 +1,11 @@
 body {
   background-color: #b19cd9;
 }
+
+.fa fa-thumbs-down {
+  color : red;
+}
+
+fa fa-thumbs-up {
+  color : green;
+}
