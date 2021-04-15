@@ -51,6 +51,8 @@ const display_quiz = async (quiz_num, question_num) => {
 
       document.querySelector("page_view").onsubmit = function () {
         let answer_text = document.querySelector('#question_answer');
+        short_answer_check(quiz_num, question_num, answer_text, answer, explanation);
+        return false;
       }
     }
     
