@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   document.querySelector("#page_view").onclick = (e) => {
     
-    handle_app_page_event(e);
+    select_quiz(e);
     
     
   };
@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-function handle_app_page_event(e) {
+function select_quiz(e) {
   
   let user_name = document.querySelector('#user_name').value;
   
-  console.log(user_name);
+  console.log(e.target.value);
   
   if (e.target.value == "quiz1") {
   
@@ -36,15 +36,20 @@ const display_quiz = async (quiz_num, question_num) => {
     
     const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/db")
     const model = await data.json()
-    const html_element = display_question(model.quiz1[question_num],`#${model.quiz1[question_num].type}`)
+    const html_element = display_question(model,`#${model.quiz_num[question_num].type}`)
     document.querySelector("#page_view").innerHTML = html_element;
+    
+    document.querySelector("#page_view").onclick = (e) => {
+      check_if_correct(e)
+
+    }
 
 
   } else if (quiz_num == 2) {
 
     const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/db")
     const model = await data.json()
-    const html_element = display_question(model.quiz1[question_num], `#${model.quiz2[question_num].type}`)
+    const html_element = display_question(model, `#${model.quiz_num[question_num].type}`)
     document.querySelector("#page_view").innerHTML = html_element;
 
   }
@@ -60,4 +65,11 @@ const display_question = (model, view) => {
   var html_widget_element = template(model)
 
   return html_widget_element
+}
+
+function check_if_correct(e) {
+
+  if (e.target.value == model.quiz_num[question_num].answer) {
+    alert("Answer is correct");
+  }
 }
