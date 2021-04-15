@@ -62,9 +62,9 @@ const display_question = (model, view) => {
   return html_widget_element
 }
 
-function mc_tf_check(quiz_number, question_number, e, correct_answer) {
+function mc_tf_check(quiz_num, question_num, e, answer) {
 
-  if (e.target.value == correct_answer) {
+  if (e.target.value == answer) {
     alert("Answer is correct");
     display_quiz(quiz_num,question_num+1);
   }
