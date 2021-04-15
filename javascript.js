@@ -1,3 +1,10 @@
+const testState = {
+  test_taker : user_name,
+  questions_correct : 0,
+  questions_wrong : 0
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#test_view").onclick = (e) => {
     
