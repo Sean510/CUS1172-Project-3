@@ -41,7 +41,7 @@ const display_quiz = async (quiz_num, question_num) => {
 
   } else if (quiz_num == 2) {
 
-    const data = await fetch(""https://my-json-server.typicode.com/sean510/cus1172-project-3/db"")
+    const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/db")
     const model = await data.json()
     const html_element = display_question(model, `#${model.quiz2[question_num].type}`)
     document.querySelector("#page_view").innerHTML = html_element;
