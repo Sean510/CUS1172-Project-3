@@ -47,6 +47,11 @@ const display_quiz = async (quiz_num, question_num) => {
       document.querySelector("#page_view").onclick = (e) => {
         tf_check(quiz_num, question_num, e, answer, explanation);
       }
+    } else if (question_type == "short_answer") {
+
+      document.querySelector("page_view").onsubmit = function () {
+        let answer_text = document.querySelector('#question_answer');
+      }
     }
     
 
@@ -124,5 +129,15 @@ function tf_check(quiz_num, question_num, e, answer, explanation) {
       alert(explanation);
       display_quiz(quiz_num,question_num+1);
     }
+  }
+}
+
+function short_answer_check(quiz_num, question_num, answer_text, answer, explanation) {
+  
+  if(answer_text == answer) {
+    //display_correct()
+  } else {
+    alert(explanation);
+    display_quiz(quiz_num, question_num+1);
   }
 }
