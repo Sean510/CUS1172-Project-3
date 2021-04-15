@@ -13,7 +13,7 @@
 
         {
             "num" : 2,
-            "type" : "true/false",
+            "type" : "true_false",
             "question" : "Java is short for JavaScript.",
             "T" : "True",
             "F" : "False",
@@ -32,7 +32,7 @@
 
         {
             "num" : 4,
-            "type" : "true/false",
+            "type" : "true_false",
             "question" : "public static void setInt(int i){}; is a method that returns an integer",
             "T" : "True",
             "F" : "False",
@@ -63,7 +63,7 @@
 
         {
             "num" : 2,
-            "type" : "true/false",
+            "type" : "true_false",
             "question" : "\"public static void main(String[] args){}\" declares a main method in Java",
             "T" : "True",
             "F" : "False",
