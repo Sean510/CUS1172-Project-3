@@ -66,6 +66,6 @@ function mc_tf_check(e, correct_answer) {
 
   if (e.target.value == correct_answer) {
     alert("Answer is correct");
-    display_question(model,`#${model.quiz2[question_num + 1].type}`)
+    display_quiz(quiz_num,question_num+1);
   }
 }
