@@ -2,10 +2,10 @@ body {
   background-color: #b19cd9;
 }
 
-.fa fa-thumbs-down {
+#wrong_num {
   color : red;
 }
 
-.fa fa-thumbs-up {
+#correct_num {
   color : green;
 }
