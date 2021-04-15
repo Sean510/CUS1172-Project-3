@@ -101,7 +101,7 @@ const display_question = (model, view) => {
 
   var template = Handlebars.compile(template_source);
 
-  var html_widget_element = template(model)
+  var html_widget_element = template({...model,...testState})
 
   return html_widget_element
 }
