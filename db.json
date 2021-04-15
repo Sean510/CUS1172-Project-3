@@ -26,7 +26,7 @@
             "type" : "short_answer",
             "question" : "Declare a variable, x, of type Integer with the value 4 in Java.",
             "answer" : "int x = 4;",
-            "explanation" : "The correct answer is \"int x = 4;\"."
+            "explanation" : "The correct answer is: int x = 4;"
             
         },
 
@@ -58,7 +58,7 @@
             "type" : "short_answer",
             "question" : "Declare a String, \"name\", that holds the name Bob.",
             "answer" : "String name = \"Bob\";",
-            "explanation" : "The correct syntax is \"String name = \"Bob\";\""
+            "explanation" : "The correct syntax is: String name = \"Bob\";"
         },
 
         {
