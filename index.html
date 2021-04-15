@@ -22,15 +22,31 @@
   
     <div id="test_view" class="container">
     
-      <form align="center">
-        <input style="width:200px" id="user_name" autocomplete="off" autofocus placeholder="Enter your name here." type="text">
-        
-        <select id="quiz_selection" name="quiz_selection">
-          <option disabled selected value>Please select a quiz to take.</option> 
-          <option value="quiz1">Quiz 1</option>
-          <option value="quiz2">Quiz 2</option>
-        </select>
-      </form>
+      <div>
+        <form align="center">
+          <input style="width:200px" id="user_name" autocomplete="off" autofocus placeholder="Enter your name here." type="text">
+          
+          <select id="quiz_selection" name="quiz_selection">
+            <option disabled selected value>Please select a quiz to take.</option> 
+            <option value="quiz1">Quiz 1</option>
+            <option value="quiz2">Quiz 2</option>
+          </select>
+        </form>
+      </div>
+      
+      <div id="test_info_view" class="card mx-auto" style="width:350px">
+    
+        <div class="counter">
+          <i class="fa fa-thumbs-up" id="correct_num"></i>
+          <h4>{{this.testState.questions_correct}}</h4>
+        </div>
+  
+        <div class="counter">
+          <i class="fa fa-thumbs-down" id="wrong_num"></i>
+          <h4>{{this.questions_wrong}}</h4>
+        </div>
+      
+      </div>
     
     </div>
 
