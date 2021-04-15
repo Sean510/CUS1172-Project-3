@@ -40,7 +40,7 @@ const display_quiz = async (quiz_num, question_num) => {
     document.querySelector("#page_view").innerHTML = html_element;
     
     document.querySelector("#page_view").onclick = (e) => {
-      check_if_correct(e)
+      check_if_correct(e);
 
     }
 
