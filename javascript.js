@@ -1,3 +1,4 @@
+let user_name = document.querySelector('#usere_name').value;
 const testState = {
   test_taker : user_name,
   questions_correct : 0,
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function select_quiz(e) {
   
-  let user_name = document.querySelector('#user_name').value;
+  //let user_name = document.querySelector('#user_name').value;
   
   if (e.target.value == "quiz1") {
   
