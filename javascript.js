@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#page_view").onclick = (e) => {
     
     handle_app_page_event(e);
-    //let user_name = document.querySelector('#user_name').value;
     
     
   };
@@ -13,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function handle_app_page_event(e) {
+  
+  let user_name = document.querySelector('#user_name').value;
   
   console.log(e.target.value);
   
