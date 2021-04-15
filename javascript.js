@@ -18,7 +18,7 @@ const display_quiz = async (quiz_num, question_num) => {
     const model = await data.json()
     console.log(model);
   
-    const html_element = display_question(model,'#true/false')
+    const html_element = display_question(model,'#true_false')
     document.querySelector("#page_view").innerHTML = html_element;
 
 
