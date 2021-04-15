@@ -36,7 +36,7 @@ const display_quiz = async (quiz_num, question_num) => {
     let answer = model.quiz1[question_num].answer;
     
     document.querySelector("#page_view").onclick = (e) => {
-      mc_tf_check(e,answer);
+      mc_tf_check(quiz_num, question_num, e, answer);
     }
 
 
@@ -62,7 +62,7 @@ const display_question = (model, view) => {
   return html_widget_element
 }
 
-function mc_tf_check(e, correct_answer) {
+function mc_tf_check(quiz_number, question_number, e, correct_answer) {
 
   if (e.target.value == correct_answer) {
     alert("Answer is correct");
