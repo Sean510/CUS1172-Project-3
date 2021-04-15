@@ -1,12 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
   document.querySelector("#page_view").onclick = (e) => {
     
     select_quiz(e);
-    
-    
   };
-  
 });
 
 
@@ -14,8 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function select_quiz(e) {
   
   let user_name = document.querySelector('#user_name').value;
-  
-  console.log(e.target.value);
   
   if (e.target.value == "quiz1") {
   
@@ -42,8 +36,7 @@ const display_quiz = async (quiz_num, question_num) => {
     let answer = model.quiz1[question_num].answer;
     
     document.querySelector("#page_view").onclick = (e) => {
-      check_if_correct(e,answer);
-
+      mc_tf_check(e,answer);
     }
 
 
@@ -69,9 +62,10 @@ const display_question = (model, view) => {
   return html_widget_element
 }
 
-function check_if_correct(e, correct_answer) {
+function mc_tf_check(e, correct_answer) {
 
   if (e.target.value == correct_answer) {
     alert("Answer is correct");
+    display_question(model,`#${model.quiz2[question_num + 1].type}`
   }
 }
