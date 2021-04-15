@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#page_view").onclick = (e) => {
+  document.querySelector("#test_view").onclick = (e) => {
     
     select_quiz(e);
   };
@@ -31,7 +31,7 @@ const display_quiz = async (quiz_num, question_num) => {
     const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/db")
     const model = await data.json()
     const html_element = display_question(model,`#${model.quiz1[question_num].type}`)
-    document.querySelector("#page_view").innerHTML = html_element;
+    document.querySelector("#test_view").innerHTML = html_element;
     
     let answer = model.quiz1[question_num].answer;
     let question_type = model.quiz1[question_num].type;
@@ -39,20 +39,19 @@ const display_quiz = async (quiz_num, question_num) => {
     
     if (question_type == "multiple_choice") {
       
-      document.querySelector("#page_view").onclick = (e) => {
+      document.querySelector("#test_view").onclick = (e) => {
         mc_check(quiz_num, question_num, e, answer, explanation);
       }
     } else if (question_type == "true_false") {
 
-      document.querySelector("#page_view").onclick = (e) => {
+      document.querySelector("#test_view").onclick = (e) => {
         tf_check(quiz_num, question_num, e, answer, explanation);
       }
     } else if (question_type == "short_answer") {
 
-      document.querySelector("#page_view").onsubmit = function () {
+      document.querySelector("#test_view").onsubmit = function () {
         let answer_text = document.querySelector('#question_answer');
         short_answer_check(quiz_num, question_num, answer_text, answer, explanation);
-        return false;
       }
     }
     
@@ -62,9 +61,30 @@ const display_quiz = async (quiz_num, question_num) => {
 
     const data = await fetch("https://my-json-server.typicode.com/sean510/cus1172-project-3/db")
     const model = await data.json()
-    const html_element = display_question(model, `#${model.quiz2[question_num].type}`)
-    document.querySelector("#page_view").innerHTML = html_element;
+    const html_element = display_question(model,`#${model.quiz2[question_num].type}`)
+    document.querySelector("#test_view").innerHTML = html_element;
+    
+    let answer = model.quiz2[question_num].answer;
+    let question_type = model.quiz2[question_num].type;
+    let explanation = model.quiz2[question_num].explanation;
+    
+    if (question_type == "multiple_choice") {
+      
+      document.querySelector("#test_view").onclick = (e) => {
+        mc_check(quiz_num, question_num, e, answer, explanation);
+      }
+    } else if (question_type == "true_false") {
 
+      document.querySelector("#test_view").onclick = (e) => {
+        tf_check(quiz_num, question_num, e, answer, explanation);
+      }
+    } else if (question_type == "short_answer") {
+
+      document.querySelector("#test_view").onsubmit = function () {
+        let answer_text = document.querySelector('#question_answer');
+        short_answer_check(quiz_num, question_num, answer_text, answer, explanation);
+      }
+    }
   }
 }
 
@@ -91,7 +111,7 @@ function mc_check(quiz_num, question_num, e, answer, explanation) {
       display_quiz(quiz_num,question_num+1);
     }
   
-  }else if (answer == "B") {
+  } else if (answer == "B") {
     
     if (e.target.value == answer) {
       //display_correct()
