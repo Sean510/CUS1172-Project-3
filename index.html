@@ -36,6 +36,8 @@
     </div>
 
 
+
+
     <!--multiple choice question template-->
     <script id="multiple_choice" type="text/x-handlebars-template">
     
@@ -46,20 +48,19 @@
         <button type="button" class="buttonB" value="B">{{this.quiz1.0.B}}</button>
         <br>
         <button type="button" class="buttonC" value="C">{{this.quiz1.0.C}}</button>
-        
+
         <div id="test_info_view" class="card mx-auto" style="width:350px">
     
-        <div class="counter">
-          <i class="fa fa-thumbs-up" id="correct_num"></i>
-          <h4>{{this.testState.questions_correct}}</h4>
+          <div class="counter">
+            <i class="fa fa-thumbs-up" id="correct_num"></i>
+            <h4>{{this.questions_correct}}</h4>
+          </div>
+    
+          <div class="counter">
+            <i class="fa fa-thumbs-down" id="wrong_num"></i>
+            <h4>{{this.questions_wrong}}</h4>
+          </div>
         </div>
-  
-        <div class="counter">
-          <i class="fa fa-thumbs-down" id="wrong_num"></i>
-          <h4>{{this.questions_wrong}}</h4>
-        </div>
-      
-      </div>
     </script>
 
     <!--true/false question template-->
@@ -69,6 +70,19 @@
       <br>
       <button type="button" class="true_botton" value="True">True</button>
       <button type="button" class="false_button" value="False">False</button>
+
+      <div id="test_info_view" class="card mx-auto" style="width:350px">
+    
+        <div class="counter">
+          <i class="fa fa-thumbs-up" id="correct_num"></i>
+          <h4>{{this.questions_correct}}</h4>
+        </div>
+  
+        <div class="counter">
+          <i class="fa fa-thumbs-down" id="wrong_num"></i>
+          <h4>{{this.questions_wrong}}</h4>
+        </div>
+      </div>
     </script>
 
     <!--short answer question template-->
@@ -80,6 +94,19 @@
         <input id="question_answer" autocomplete="off" autofocus placeholder="Enter your answer here." type="text">
         <input id="submit" type="submit">
       </form>
+
+      <div id="test_info_view" class="card mx-auto" style="width:350px">
+    
+        <div class="counter">
+          <i class="fa fa-thumbs-up" id="correct_num"></i>
+          <h4>{{this.questions_correct}}</h4>
+        </div>
+  
+        <div class="counter">
+          <i class="fa fa-thumbs-down" id="wrong_num"></i>
+          <h4>{{this.questions_wrong}}</h4>
+        </div>
+      </div>
     </script>
 
     <!--explanation question template-->
@@ -90,3 +117,4 @@
     
   </body>
 </html>
+
