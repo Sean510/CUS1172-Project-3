@@ -12,4 +12,7 @@ body {
 
 .card {
   text-align : center;
+  border-style : solid;
+  border-color : black;
+  background-color : #b19cd9;
 }
