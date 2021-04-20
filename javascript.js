@@ -1,7 +1,7 @@
 
 const testState = {
-  questions_correct : 0,
-  questions_wrong : 0
+  questions_answered : 0,
+  score : 0
 }
 
 
@@ -110,18 +110,22 @@ const display_question = (model, view) => {
   return html_widget_element
 }
 
+
+//functions to check if answers are correct
+
 function mc_check(quiz_num, question_num, e, answer, explanation) {
 
   if (answer == "A") {
     
     if (e.target.value == answer) {
       //display_correct()
-      testState.question_correct++
+      testState.questions_answered++
+      testState.score += 5
       display_quiz(quiz_num, question_num+1);
 
     } else if (e.taget.value == "B" || e.target.value == "C") {
       alert(explanation);
-      testState.questions_wrong++
+      testState.questions_answered++
       display_quiz(quiz_num,question_num+1);
     }
   
@@ -129,12 +133,13 @@ function mc_check(quiz_num, question_num, e, answer, explanation) {
     
     if (e.target.value == answer) {
       //display_correct()
-      testState.questions_correct++
+      testState.questions_answered++
+      testState.score += 5
       display_quiz(quiz_num, question_num+1);
     
     } else if (e.taget.value == "A" || e.target.value == "C") {
       alert(explanation);
-      testState.questions_wrong++
+      testState.questions_answered++
       display_quiz(quiz_num,question_num+1);
     }
   
@@ -142,12 +147,13 @@ function mc_check(quiz_num, question_num, e, answer, explanation) {
       
     if (e.target.value == answer) {
         //display_correct()
-        testState.questions_correct++
+        testState.questions_answered++
+        testState.score += 5
         display_quiz(quiz_num, question_num+1);
 
       } else if (e.target.value == "A" || e.target.value == "B") {
         alert(explanation);
-        testState.questions_wrong++
+        testState.questions_answered++
         display_quiz(quiz_num,question_num+1);
       }
   }
@@ -160,12 +166,13 @@ function tf_check(quiz_num, question_num, e, answer, explanation) {
     
     if (e.target.value == answer) {
       //display_correct()
-      testState.questions_correct++
+      testState.questions_answered++
+      testState.score += 5
       display_quiz(quiz_num, question_num+1);
     
     } else if (e.target.value == "False") {
       alert(explanation);
-      testState.questions_wrong++
+      testState.questions_answered++
       display_quiz(quiz_num, question_num+1);
     }
   
@@ -173,12 +180,13 @@ function tf_check(quiz_num, question_num, e, answer, explanation) {
     
     if (e.target.value == answer) {
       //display_correct
-      testState.questions_correct++
+      testState.questions_answered++
+      testState.score += 5
       display_quiz(quiz_num, question_num+1);
     
     } else if (e.target.value == "True") {
       alert(explanation);
-      testState.questions_wrong++
+      testState.questions_answered++
       display_quiz(quiz_num,question_num+1);
     }
   }
@@ -188,16 +196,14 @@ function short_answer_check(quiz_num, question_num, answer_text, answer, explana
   
   if(answer_text == answer) {
     //display_correct()
-    testState.questions_correct++
-    if (question_num == "last") {
-      alert("test is finished");
-    } else {
-      display_quiz(quiz_num, question_num+1);
-    }
+    testState.questions_answered++
+    testState.score += 5
+    display_quiz(quiz_num, question_num+1);
+    
   
   } else {
     alert(explanation);
-    testState.questions_wrong++
+    testState.questions_answered++
     display_quiz(quiz_num, question_num+1);
   }
 }
