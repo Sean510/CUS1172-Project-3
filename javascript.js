@@ -1,4 +1,3 @@
-
 const testState = {
   questions_correct : 0,
   questions_wrong : 0
@@ -179,6 +178,11 @@ function short_answer_check(quiz_num, question_num, answer_text, answer, explana
   if(answer_text == answer) {
     //display_correct()
     testState.questions_correct++
+    if (question_num == "last") {
+      alert("test is finished");
+    } else {
+      display_quiz(quiz_num, question_num+1);
+    }
   
   } else {
     alert(explanation);
