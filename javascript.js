@@ -1,3 +1,4 @@
+
 const testState = {
   questions_correct : 0,
   questions_wrong : 0
@@ -59,6 +60,7 @@ const display_quiz = async (quiz_num, question_num) => {
 
       document.querySelector("#test_view").onsubmit = function () {
         let answer_text = document.querySelector('#question_answer');
+        console.log(answer_text)
         short_answer_check(quiz_num, question_num, answer_text, answer, explanation);
       }
     }
