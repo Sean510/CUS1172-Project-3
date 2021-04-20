@@ -113,6 +113,7 @@ function mc_check(quiz_num, question_num, e, answer, explanation) {
     if (e.target.value == answer) {
       //display_correct()
       testState.question_correct++
+      display_quiz(quiz_num, question_num+1);
 
     } else if (e.taget.value == "B" || e.target.value == "C") {
       alert(explanation);
@@ -125,6 +126,8 @@ function mc_check(quiz_num, question_num, e, answer, explanation) {
     if (e.target.value == answer) {
       //display_correct()
       testState.questions_correct++
+      display_quiz(quiz_num, question_num+1);
+    
     } else if (e.taget.value == "A" || e.target.value == "C") {
       alert(explanation);
       testState.questions_wrong++
@@ -136,6 +139,8 @@ function mc_check(quiz_num, question_num, e, answer, explanation) {
     if (e.target.value == answer) {
         //display_correct()
         testState.questions_correct++
+        display_quiz(quiz_num, question_num+1);
+
       } else if (e.target.value == "A" || e.target.value == "B") {
         alert(explanation);
         testState.questions_wrong++
@@ -152,6 +157,7 @@ function tf_check(quiz_num, question_num, e, answer, explanation) {
     if (e.target.value == answer) {
       //display_correct()
       testState.questions_correct++
+      display_quiz(quiz_num, question_num+1);
     
     } else if (e.target.value == "False") {
       alert(explanation);
@@ -164,6 +170,7 @@ function tf_check(quiz_num, question_num, e, answer, explanation) {
     if (e.target.value == answer) {
       //display_correct
       testState.questions_correct++
+      display_quiz(quiz_num, question_num+1);
     
     } else if (e.target.value == "True") {
       alert(explanation);
