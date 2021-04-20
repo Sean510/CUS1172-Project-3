@@ -3,7 +3,7 @@
         {
             "num" : 1,
             "type" : "multiple_choice" ,
-            "question" : "Which is the correct way to print \"Hello World' in Java?\"",
+            "question" : "Which is the correct way to print \"Hello World\" in Java?",
             "A" : "print(\"Hello World\");",
             "B" : "Console.WriteLine(\"Hello World\");",
             "C" : "System.out.println(\"Hello World\");",
@@ -22,7 +22,7 @@
         },
 
         {
-            "num" : 4,
+            "num" : 3,
             "type" : "short_answer",
             "question" : "Declare a variable, x, of type Integer with the value 4 in Java.",
             "answer" : "int x = 4;",
@@ -31,7 +31,7 @@
         },
 
         {
-            "num" : 3,
+            "num" : 4,
             "type" : "true_false",
             "question" : "public static void setInt(int i){}; is a method that returns an integer",
             "T" : "True",
@@ -52,11 +52,109 @@
         },
 
         {
-            "num" : "last",
+            "num" : 6,
             "type" : "short_answer",
             "question" : "How is \"not equal to\" expressed in java?",
             "answer" : "!=",
             "explanation" : "The correct way to exparess \"not equal to\" in java is !="              
+        },
+
+        {
+            "num" : 7,
+            "type" : "true_false",
+            "question" : "Linked lists contain nodes.",
+            "T" : "True",
+            "F" : "False",
+            "answer" : "True",
+            "explanation" : "The correct answer is True.  Linked lists contain nodes which have a data field as well as a next field."
+        },
+
+        {
+            "num" : 8,
+            "type" : "multiple_choice" ,
+            "question" : "What is the correct Big O Notation for linear time?",
+            "A" : "O(1)",
+            "B" : "O(n)",
+            "C" : "O(n^2)",
+            "answer" : "B",
+            "explanation" : "The correct answer is B. O(1) is constant time, O(n^2) is quadratic time."
+        },
+
+        {
+            "num" : 9,
+            "type" : "multiple_choice" ,
+            "question" : "Which is the correct answer to declare an String array named \"stringArray\" with a length of 10 in Java?",
+            "A" : "Array(String) stringArray = new Array(10);",
+            "B" : "String[10] stringArray = new String[];",
+            "C" : "String[] stringArray = new String[10];",
+            "answer" : "C",
+            "explanation" : "The correct answer is C."
+        },
+
+        {
+            "num" : 10,
+            "type" : "true_false",
+            "question" : "Sets allow duplicate elements.",
+            "T" : "True",
+            "F" : "False",
+            "answer" : "False",
+            "explanation" : "The correct answer is False.  Sets do not allow duplicate elements."
+        },
+
+        {
+            "num" : 11,
+            "type" : "short_answer",
+            "question" : "The last node in a signly linked list will point to: ",
+            "answer" : "null",
+            "explanation" : "The last item in a singly linked list will point to null."
+        },
+
+        {
+            "num" : 12,
+            "type" : "short_answer",
+            "question" : "What is the output of the following Java code: System.out.println(\"2^(2+1)\");",
+            "answer" : "2^(2+1)",
+            "explanation" : "The correct answer is 2^(2+1).  Because the equation is in double quotes it will print the equation instead of solving it."
+        },
+
+        {
+            "num" : 13,
+            "type" : "true_false",
+            "question" : "HTML stands for Hypertext Markup Language.",
+            "T" : "True",
+            "F" : "False",
+            "answer" : "True",
+            "explanation" : "The correct answer is True."
+        },
+
+        {
+            "num" : 14,
+            "type" : "multiple_choice" ,
+            "question" : "A linked list is empty if the head node equals:",
+            "A" : "null",
+            "B" : "0",
+            "C" : "empty",
+            "answer" : "A",
+            "explanation" : "The correct answer is A, a linked list is empty when the head node has a value of null."
+        },
+
+        {
+            "num" : 15,
+            "type" : "short_answer",
+            "question" : "What is the output of the following Java code: System.out.println(10%2);",
+            "answer" : "0",
+            "explanation" : "The correct answer is 0.  The remainder of 10 / 2 is 0."
+        },
+
+        {
+            "num" : 16,
+            "type" : "multiple_choice" ,
+            "question" : "The first element in array \"x\" is expressed as: ",
+            "A" : "x[1]",
+            "B" : "x[0]",
+            "C" : "x.firstElement",
+            "answer" : "B",
+            "explanation" : "The correct answer is B.  0 is the first index of an array."
         }
     ],
 
@@ -64,7 +162,7 @@
         {
             "num" : 1,
             "type" : "short_answer",
-            "question" : "Declare a String, \"name\", that holds the name Bob.",
+            "question" : "Declare a String, \"name\", that holds the name Bob in Java.",
             "answer" : "String name = \"Bob\";",
             "explanation" : "The correct syntax is: String name = \"Bob\";"
         },
