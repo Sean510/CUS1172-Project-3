@@ -56,13 +56,13 @@
         <div id="test_info_view" class="card mx-auto" style="width:350px">
     
           <div class="counter">
-            <i class="fa fa-thumbs-up" id="correct_num"></i>
-            <h4>{{this.questions_correct}}</h4>
+            
+            <h4>Questions Answered: {{this.questions_answered}}</h4>
           </div>
     
           <div class="counter">
-            <i class="fa fa-thumbs-down" id="wrong_num"></i>
-            <h4>{{this.questions_wrong}}</h4>
+            
+            <h4>Current Score: {{this.score}}%</h4>
           </div>
         </div>
     </script>
@@ -78,36 +78,8 @@
       <div id="test_info_view" class="card mx-auto" style="width:350px">
     
         <div class="counter">
-          <i class="fa fa-thumbs-up" id="correct_num"></i>
-          <h4>{{this.questions_correct}}</h4>
-        </div>
-  
-        <div class="counter">
-          <i class="fa fa-thumbs-down" id="wrong_num"></i>
-          <h4>{{this.questions_wrong}}</h4>
-        </div>
-      </div>
-    </script>
-
-    <!--short answer question template-->
-    <script id="short_answer" type="text/x-handlebars-template">
-    
-      <h2 class="question_text">{{this.question}}</h2>
-      <br>
-      <form onsubmit="return false">
-        <input id="question_answer" autocomplete="off" autofocus placeholder="Enter your answer here." type="text">
-        <input id="submit" type="submit">
-      </form>
-      
-      <br>
-      <br>
-      <br>
-
-      <div id="test_info_view" class="card mx-auto" style="width:350px">
-    
-        <div class="counter">
           
-          <h4>Questions Answered: {{this.questions_correct}}</h4>
+          <h4>Questions Answered: {{this.questions_answered}}</h4>
         </div>
   
         <div class="counter">
@@ -117,71 +89,6 @@
       </div>
     </script>
 
-    <!--explanation question template-->
-    <script id="explanation" type="text/x-handlebars-template">
-    
-      
-    </script>
-    
-  </body>
-</html>
-
-    </div>
-
-
-
-
-    <!--multiple choice question template-->
-    <script id="multiple_choice" type="text/x-handlebars-template">
-    
-        <h2 class="question_text">{{this.question}}</h1>
-        <br>
-        <button type="button" class="buttonA" value="A">{{this.A}}</button>
-        <br>
-        <button type="button" class="buttonB" value="B">{{this.B}}</button>
-        <br>
-        <button type="button" class="buttonC" value="C">{{this.C}}</button>
-        
-        <br>
-        <br>
-        <br>
-
-        <div id="test_info_view" class="card mx-auto" style="width:350px">
-    
-          <div class="counter">
-            <i class="fa fa-thumbs-up" id="correct_num"></i>
-            <h4>{{this.questions_correct}}</h4>
-          </div>
-    
-          <div class="counter">
-            <i class="fa fa-thumbs-down" id="wrong_num"></i>
-            <h4>{{this.questions_wrong}}</h4>
-          </div>
-        </div>
-    </script>
-
-    <!--true/false question template-->
-    <script id="true_false" type="text/x-handlebars-template">
-
-      <h2 class="question_text">{{this.question}}</h2>
-      <br>
-      <button type="button" class="true_botton" value="True">True</button>
-      <button type="button" class="false_button" value="False">False</button>
-
-      <div id="test_info_view" class="card mx-auto" style="width:350px">
-    
-        <div class="counter">
-          <i class="fa fa-thumbs-up" id="correct_num"></i>
-          <h4>{{this.questions_correct}}</h4>
-        </div>
-  
-        <div class="counter">
-          <i class="fa fa-thumbs-down" id="wrong_num"></i>
-          <h4>{{this.questions_wrong}}</h4>
-        </div>
-      </div>
-    </script>
-
     <!--short answer question template-->
     <script id="short_answer" type="text/x-handlebars-template">
     
@@ -199,13 +106,13 @@
       <div id="test_info_view" class="card mx-auto" style="width:350px">
     
         <div class="counter">
-          <i class="fa fa-thumbs-up" id="correct_num"></i>
-          <h4>{{this.questions_correct}}</h4>
+          
+          <h4>Questions Answered: {{this.questions_answered}}</h4>
         </div>
   
         <div class="counter">
-          <i class="fa fa-thumbs-down" id="wrong_num"></i>
-          <h4>{{this.questions_wrong}}</h4>
+          
+          <h4>Current Score: {{this.score}}%</h4>
         </div>
       </div>
     </script>
