@@ -22,7 +22,7 @@
         },
 
         {
-            "num" : 3,
+            "num" : 4,
             "type" : "short_answer",
             "question" : "Declare a variable, x, of type Integer with the value 4 in Java.",
             "answer" : "int x = 4;",
@@ -31,7 +31,7 @@
         },
 
         {
-            "num" : 4,
+            "num" : 3,
             "type" : "true_false",
             "question" : "public static void setInt(int i){}; is a method that returns an integer",
             "T" : "True",
